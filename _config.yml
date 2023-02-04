@@ -23,7 +23,7 @@ name                     : "Victor Nascimento"
 description              : "Um blog para compartilhar algumas coisas sobre Java - e outras tecnologias (Angular, Spring Framework, Spring Boot, Spring Web, Spring Cloud, Spring Security, React, Kotlin e algumas outras)"
 url                      : "https://victor-vn.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : victor-VN/victor-vn.github.io
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "VIA JAVA"
