@@ -13,7 +13,7 @@
 
 
 main:
+- title: "Home"
+  url: /
 - title: "Sobre"
   url: /about
-- title: "Contatos"
-  url: /contact
