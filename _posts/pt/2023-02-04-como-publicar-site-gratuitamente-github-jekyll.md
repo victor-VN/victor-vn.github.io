@@ -55,7 +55,10 @@ Exemplo:
 
 ![ruby installer command prompt](/assets/images/posts/2023-02-04/github-create-repo.png)
 
-2 - Clone o repositório para sua máquina usando o git bash
+2 - Marque a opção "Add a README file" <br><br>
+![ruby installer command prompt](/assets/images/posts/2023-02-04/readme.png)
+
+3 - Clone o repositório para sua máquina usando o git bash
 ```console
 myuser@DESKTOP-637R5MB MINGW64 ~ git clone https://github.com/nome-do-usuario/nome-do-usuario.github.io.git
 ```
