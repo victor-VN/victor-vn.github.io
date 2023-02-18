@@ -174,3 +174,11 @@ Explorar todas as configurações possíveis fugiria do escopo desse post e pra 
 
 {: .notice--success}
 Caso tenha encontrado algum problema no processo ou tenha algo a acrescentar, por favor deixe um comentário. Até a próxima.
+
+Referências: 
+
+- [https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/)
+- [https://dev.to/chris_l_ayers/customizing-my-chosen-jekyll-theme-minimal-mistakes-12l4](https://dev.to/chris_l_ayers/customizing-my-chosen-jekyll-theme-minimal-mistakes-12l4)
+- [https://www.fabriziomusacchio.com/blog/2021-08-11-Minimal_Mistakes_Cheat_Sheet/](https://www.fabriziomusacchio.com/blog/2021-08-11-Minimal_Mistakes_Cheat_Sheet/)
+- [https://stackoverflow.com/questions/71001952/github-pages-cant-find-jekyll-theme-minimal-mistakes](https://stackoverflow.com/questions/71001952/github-pages-cant-find-jekyll-theme-minimal-mistakes)
+- [https://shantoroy.com/jekyll/google-analytics-in-jekyll-minimal-mistakes-blog-theme/](https://stackoverflow.com/questions/71001952/github-pages-cant-find-jekyll-theme-minimal-mistakes)
