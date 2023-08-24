@@ -7,3 +7,17 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+.home-post-link{
+    text-decoration: none; 
+    color: darkslategrey;
+}
+
+.home-post-link:visited{
+    text-decoration: none; 
+    color: darkslategrey;
+}
+
+.home-post-link:hover{
+    color: rgb(84, 147, 147);
+}
