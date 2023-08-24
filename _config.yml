@@ -288,10 +288,11 @@ defaults:
       author_profile: true
       # read_time: true
       comments: true
+        provider: "utterances"
+        utterances:
+          theme: "github-light" # "github-dark"
+          issue_term: "pathname"
+          label: "documentation" # Optional - must be existing label.
       share: true
       related: true
-      provider: "utterances"
-      utterances:
-        theme: "github-light" # "github-dark"
-        issue_term: "pathname"
-        label: "documentation" # Optional - must be existing label.
+       
