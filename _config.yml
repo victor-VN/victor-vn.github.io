@@ -286,14 +286,12 @@ defaults:
     values:
       layout: single
       author_profile: true
-      comments: true
       # read_time: true
       comments:
         provider: "utterances"
         utterances:
           theme: "github-light" # "github-dark"
           issue_term: "pathname"
-          label: "comment" # Optional - must be existing label.
       share: true
       related: true
        
