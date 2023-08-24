@@ -287,7 +287,7 @@ defaults:
       layout: single
       author_profile: true
       # read_time: true
-      comments:
+      comments: true
         provider: "utterances"
         utterances:
           theme: "github-light" # "github-dark"
