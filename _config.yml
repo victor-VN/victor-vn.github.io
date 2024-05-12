@@ -16,7 +16,7 @@ minimal_mistakes_skin    : contrast # default # "air", "aqua", "contrast", "dark
 
 # Site Settings
 locale                   : "pt-BR"
-title                    : "Github Blog"
+title                    : "Home"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Victor Oliveira"
@@ -107,7 +107,7 @@ analytics:
 author:
   name             : "Victor Oliveira"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Desenvolvedor Full Stack há 4+ anos, ainda tenho bastante a aprender mas consigo contribuir de alguma forma"
+  bio              : "Desenvolvedor Full Stack com +4 anos de experiência ainda com muito a aprender e um pouco a ensinar."
   location         : "Brasil - São Paulo"
   email            :
   links:
