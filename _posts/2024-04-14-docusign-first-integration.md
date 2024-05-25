@@ -236,43 +236,43 @@ Após configurar o nosso projeto Spring vamos acessar o [painel da Docusign](htt
 
 Acesse a o painel e clique em **Settings**
 
-![image-center](/assets/images/2024-04-14-img/1-painel.png){: .align-center}
+![home do painel do docusign](/assets/images/2024-04-14-img/1-painel.png){: .align-center}
 
 Do lado esquerdo inferior clique em **Apps and Keys**
 
-![image-center](/assets/images/2024-04-14-img/2-painel-apps-keys.png){: .align-center}
+![settings do painel do docusign](/assets/images/2024-04-14-img/2-painel-apps-keys.png){: .align-center}
 
 Já nessa tela podemos ver algumas informações que vamos precisar para preencher nosso arquivo. Copie o **User ID** e o **API Account ID** e preencha no arquivo de **properties**. 
 
-![image-center](/assets/images/2024-04-14-img/3-painel-first-keys.png){: .align-center}
+![apps and keys do painel do docusign](/assets/images/2024-04-14-img/3-painel-first-keys.png){: .align-center}
 
 Clique em **Add App and Integration Key**
 
-![image-center](/assets/images/2024-04-14-img/4-painel-add-app.png){: .align-center}
+![adicionando app e chave de integracao no docusign](/assets/images/2024-04-14-img/4-painel-add-app.png){: .align-center}
 
 Crie um novo App (aqui vamos chamar de **playground-app**)
 
-![image-center](/assets/images/2024-04-14-img/5-painel-create-app.png){: .align-center}
+![adicionando nome do app no docusign](/assets/images/2024-04-14-img/5-painel-create-app.png){: .align-center}
 
 Copie a **Integration Key** e cole no arquivo **properties**
 
-![image-center](/assets/images/2024-04-14-img/6-painel-integration-key.png){: .align-center}
+![copiando a integration key do app no docusign](/assets/images/2024-04-14-img/6-painel-integration-key.png){: .align-center}
 
 Clique em **Generate RSA** 
 
-![image-center](/assets/images/2024-04-14-img/7-painel-generate-key.png){: .align-center}
+![gerando a chave RSA do app no docusign](/assets/images/2024-04-14-img/7-painel-generate-key.png){: .align-center}
 
 Salve o conteúdo da **Public Key** e da **Private Key** em arquivos nomeados **public-key** e **private-key** respectivamente e mova os arquivos para a **src/main/resource** dentro da sua aplicação Spring
 
-![image-center](/assets/images/2024-04-14-img/8-painel-generate-key-save.png){: .align-center}
+![salvando o conteudo da chave em arquivos](/assets/images/2024-04-14-img/8-painel-generate-key-save.png){: .align-center}
 
 Em **Redirect URLs** adicione ```http://localhost:8080/ds/callback```
 
-![image-center](/assets/images/2024-04-14-img/9-painel-redirect-url.png){: .align-center}
+![adicionando uma redirect url](/assets/images/2024-04-14-img/9-painel-redirect-url.png){: .align-center}
 
 Mais para baixo preencha os métodos ```GET, POST, PUT, DELETE``` e clique em **Salvar**
 
-![image-center](/assets/images/2024-04-14-img/10-painel-http-methods.png){: .align-center}
+![permitindo todos metodos http para o app](/assets/images/2024-04-14-img/10-painel-http-methods.png){: .align-center}
 
 Ao final seu arquivo **application.properties** deve estar preenchido com as informações da aplicação e no diretório **resources** deve conter os arquivos **public-key.txt** e **private-key.txt**
 
@@ -294,45 +294,45 @@ Para resumir e simplificar podemos entender o **template** como o documento que 
 
 Aqui nosso documento será um arquivo **.docx** com o seguinte conteúdo
 
-![image-center](/assets/images/2024-04-14-img/21-mydoc-view.png){: .align-center}
+![documento .docx que sera o arquivo de template](/assets/images/2024-04-14-img/21-mydoc-view.png){: .align-center}
 
 Depois vamos no [painel Docusign]() criar o template clicando em **Templates** e depois **New** > **Create Template**
 
-![image-center](/assets/images/2024-04-14-img/22-create-template.png){: .align-center}
+![criando um novo template no painel docusign](/assets/images/2024-04-14-img/22-create-template.png){: .align-center}
 
 Preencha o nome do template, adicione uma descrição e faça upload do arquivo **.docx**. 
 
-![image-center](/assets/images/2024-04-14-img/23-create-template-filling.png){: .align-center}
+![preenchendo nome do template e fazendo upload do arquivo](/assets/images/2024-04-14-img/23-create-template-filling.png){: .align-center}
 
 Ainda na mesma página mais abaixo clique em **Add Recipient**
 
-![image-center](/assets/images/2024-04-14-img/24-create-template-recipient.png){: .align-center}
+![adicionando recipients para o template](/assets/images/2024-04-14-img/24-create-template-recipient.png){: .align-center}
 
 Depois marque o _checkbox_ **Set signing order** e preencha os dados de **Role** para os dois _signer_ com **owner_signer** e **stranger_signer** respectivamente. Preencha para o owner_signer um **Name** e em **Email** preencha com um e-mail que você terá acesso. É nele que o Docusign vai enviar o seu novo envelope. 
 
-![image-center](/assets/images/2024-04-14-img/25-create-template-recipient-orders.png){: .align-center}
+![preenchendo dados do recipient](/assets/images/2024-04-14-img/25-create-template-recipient-orders.png){: .align-center}
 
 Clique em **Next**
 
-![image-center](/assets/images/2024-04-14-img/26-create-template-recipient-next.png){: .align-center}
+![clicando em next no recipient](/assets/images/2024-04-14-img/26-create-template-recipient-next.png){: .align-center}
 
 Do lado esquerdo clique em **Signature** e posicione o novo campo aonde deseja que o usuário que receberá o e-mail faça a assinatura. 
 
-![image-center](/assets/images/2024-04-14-img/27-create-template-recipient-first-sign.png){: .align-center}
+![adicionando campo de assinatura no template no docusign](/assets/images/2024-04-14-img/27-create-template-recipient-first-sign.png){: .align-center}
 
 Repita o processo para adicionar a assinatura no segundo campo do documento mas desta vez do lado direito clique em **Recipient** e selecione a opção **stranger_signer**
 
-![image-center](/assets/images/2024-04-14-img/28-create-template-recipient-second-sign.png){: .align-center}
+![adicionando segundo campo de assinatura no template no docusign](/assets/images/2024-04-14-img/28-create-template-recipient-second-sign.png){: .align-center}
 
 Por fim clique em **Save and Close**.
 
 Ao finalizar veremos que nosso novo template já aparece na lista de templates criados. Clique no seu template criado
 
-![image-center](/assets/images/2024-04-14-img/29-all-templates.png){: .align-center}
+![visualizando template criado no docusign](/assets/images/2024-04-14-img/29-all-templates.png){: .align-center}
 
 Clique em **Template ID** e copie o valor mostrado na tela. É ele que vamos usar para criar nossos novos envelopes. 
 
-![image-center](/assets/images/2024-04-14-img/30-template-id.png){: .align-center}
+![copiando o id do template no docusign](/assets/images/2024-04-14-img/30-template-id.png){: .align-center}
 
 Agora que finalizamos a criação do nosso template podemos seguir adiante. 
 
@@ -343,7 +343,7 @@ O Docusign provém 3 tipos de autenticação; _Authorization Code Grant_, _Impli
 
 Baseado no [diagrama](https://developers.docusign.com/platform/auth/) que a Docusign disponibiliza, usaremos a autenticação via **JWT** 
 
-![image-center](/assets/images/2024-04-14-img/11-public-docauth-diagram.png){: .align-center}
+![diagrama de autenticacao docusign](/assets/images/2024-04-14-img/11-public-docauth-diagram.png){: .align-center}
 
 Para fazer a autenticação preencha a url abaixo trocando **INTEGRATION_KEY** pelo valor da sua _Integration Key_ (a mesma usada para preencher a property **docusign.client.id**) e cole no navegador (você pode entender melhor o processo de autenticação via JWT [aqui](https://developers.docusign.com/platform/auth/jwt/jwt-get-token/))
 
@@ -353,15 +353,15 @@ Para fazer a autenticação preencha a url abaixo trocando **INTEGRATION_KEY** p
 
 Você será direcionado para uma tela de login novamente, preencha e faça login 
 
-![image-center](/assets/images/2024-04-14-img/12-login-jwt-first.png){: .align-center}
+![fazendo login de autenticacao no docusign](/assets/images/2024-04-14-img/12-login-jwt-first.png){: .align-center}
 
 Clique em **Allow Access**
 
-![image-center](/assets/images/2024-04-14-img/13-login-jwt-allow-access.png){: .align-center}
+![permitindo acesso do app no docusign](/assets/images/2024-04-14-img/13-login-jwt-allow-access.png){: .align-center}
 
 Como a nossa URL de callback aponta para localhost (_http://localhost:8080/ds/callback_) uma tela preta de erro deve aparecer, ainda assim isso não indica erro necessariamente. <span style="color: green">Nosso aplicativo está autenticado!!</span>
 
-![image-center](/assets/images/2024-04-14-img/14-login-jwt-callback.png){: .align-center}
+![mensagem de erro após autenticcao no docusign](/assets/images/2024-04-14-img/14-login-jwt-callback.png){: .align-center}
 
 ## Criando Controllers, Models e Services
 
@@ -371,7 +371,7 @@ Todo o código feito abaixo pode está no github: [docusign-playground](https://
 
 Prosseguindo, nossa aplicação terá 1 endpoint ```/docusign``` com dois métodos: ```POST``` e ```PUT```. Vamos começar criando 3 novos _packages_ na nossa aplicação; ```controller```, ```model``` e ```service```. 
 
-![image-center](/assets/images/2024-04-14-img/15-app-packages.png){: .align-center}
+![visualizando pacotes java da aplicacao no intellij](/assets/images/2024-04-14-img/15-app-packages.png){: .align-center}
 
 ### Criando os models
 No pacote ```model``` vamos criar 3 classes para nossas requisições; ```CreateEnvelopeRequestBody```, ```SignerRequest``` e ```UpdateEnvelopeRequestBody```
@@ -433,17 +433,17 @@ public class EnvelopeController {
 Após testar nossos métodos no **Postman** vemos que tudo está funcionando normalmente
 
 Testando o ```POST```
-![image-center](/assets/images/2024-04-14-img/16-test-1.png){: .align-center}
+![testando a requisicao post inicial no postman](/assets/images/2024-04-14-img/16-test-1.png){: .align-center}
 
 Testando o ```PUT```
-![image-center](/assets/images/2024-04-14-img/17-test-2.png){: .align-center}
+![testando a requisicao put inicial no postman](/assets/images/2024-04-14-img/17-test-2.png){: .align-center}
 
 Vamos agora à parte mais legal, vamos criar nossos services para nos comunicar com o **Docusign**.
 
 ### Criando o service de autenticação
 Crie dentro do _package_ ```service``` um novo _package_ chamado ```auth```
 
-![image-center](/assets/images/2024-04-14-img/18-app-package-auth.png){: .align-center}
+![visualizando pacotes java no intellij](/assets/images/2024-04-14-img/18-app-package-auth.png){: .align-center}
 
 Dentro do _package_ ```auth``` vamos criar a interface ```DocusignAuthService```
 
@@ -681,11 +681,11 @@ Novamente temos muita coisa acontecendo aqui então vamos por partes. Primeiro v
 
 4 - Criamos uma lista de objetos do tipo **TemplateRole**. Cada objeto nessa lista representa um _signer_ dentro de um _template_. Seguindo o exemplo do print abaixo cada objeto seria preenchido com um _roleName_, _name_ e _email_.
 
-![image-center](/assets/images/2024-04-14-img/19-templates-signers.png){: .align-center}
+![visualizando recipients do template no docusign](/assets/images/2024-04-14-img/19-templates-signers.png){: .align-center}
 
 5 - Criamos uma instância do objeto **EnvelopeDefinition**. Nele preenchemos um ID de um _envelope_, o _status_ em que queremos criar esse _envelope_ (caso queira que um e-mail seja enviado já na criação do envelope use o status **sent**), o ID do template que criamos no momento da [configuração da conta](#configurar-conta-template). 
 
-![image-center](/assets/images/2024-04-14-img/20-template-id-view.png){: .align-center}
+![visualizando informacoes basicas do templa no docusign](/assets/images/2024-04-14-img/20-template-id-view.png){: .align-center}
 
 6 - Enviamos a requisição para o Docusign para a criação do novo _envelope_. Neste momento o primeiro _signer_ da ordem já deverá receber um e-mail e já devemos ver um novo _envelope_ criado no Docusign. 
 
@@ -776,7 +776,7 @@ Primeiro vamos criar um novo envelope.
 
 Para isso vamos enviar uma requisição como no exemplo abaixo:
 
-![image-center](/assets/images/2024-04-14-img/31-testing-envelope.png){: .align-center}
+![enviando requisicao para criar envelope para o docusign via postman](/assets/images/2024-04-14-img/31-testing-envelope.png){: .align-center}
 
 Corpo da requisição
 
@@ -803,27 +803,27 @@ Os campos razurados devem ser substituído pelo **Envelope ID** que salvamos qua
 
 Após enviar a requisição você deve receber um retorno com status HTTP ```200``` se tudo der certo como no print
 
-![image-center](/assets/images/2024-04-14-img/32-testing-envelope-created.png){: .align-center}
+![visualizando retorno com status 200 - sucesso apos requisicao ao docusign](/assets/images/2024-04-14-img/32-testing-envelope-created.png){: .align-center}
 
 Ao clicar em **Manage** no Docusign já devemos ver nosso novo _envelope_ criado.
 
-![image-center](/assets/images/2024-04-14-img/33-testing-envelope-created-docusign.png){: .align-center}
+![visualizando envelopes criados no docusign](/assets/images/2024-04-14-img/33-testing-envelope-created-docusign.png){: .align-center}
 
 Também já podemos visualizar nosso documento no email cadastrado
 
-![image-center](/assets/images/2024-04-14-img/34-testing-envelope-created-email.png){: .align-center}
+![visualisando envelope recebido via email](/assets/images/2024-04-14-img/34-testing-envelope-created-email.png){: .align-center}
 
 Vamos assinar nosso documento: clique no link recebido no email, adicione sua assinatura clicando no ícone amarelo e depois clique em **Finish**
 
-![image-center](/assets/images/2024-04-14-img/35-testing-envelope-signed-first.png){: .align-center}
+![assinando envelope no link recebido via email](/assets/images/2024-04-14-img/35-testing-envelope-signed-first.png){: .align-center}
 
 Ao voltar para o painel do Docusign vemos que o status do nosso envelope foi alterado e que agora só falta 1 dos 2 integrantes do documento assinar.
 
-![image-center](/assets/images/2024-04-14-img/36-testing-envelope-signed-first-docusign.png){: .align-center}
+![visualizando status do envelope no docusign](/assets/images/2024-04-14-img/36-testing-envelope-signed-first-docusign.png){: .align-center}
 
 Vemos também que o email foi enviado para a segunda pessoa que deve assinar o documento.
 
-![image-center](/assets/images/2024-04-14-img/37-testing-envelope-signed-second.png){: .align-center}
+![visualizando segundo email enviado via docusign](/assets/images/2024-04-14-img/37-testing-envelope-signed-second.png){: .align-center}
 
 ### Atualizando um envelope
 
@@ -833,27 +833,27 @@ Para isso vamos usar o segundo método que criamos.
 
 Quando fizemos a criação do acordo recebemos como resposta um status ```200``` com um corpo de response, nesse corpo é possível ver um campo chamado **envelopeId**. Copie o valor retornado nesse campo para usar na próxima requisição
 
-![image-center](/assets/images/2024-04-14-img/32-testing-envelope-created.png){: .align-center}
+![enviando requisicao para atualizar envelope no docusign pelo postman](/assets/images/2024-04-14-img/32-testing-envelope-created.png){: .align-center}
 
 Nossa nova requisição será feita com o ID do envelope que desejamos atualizar e o **novo email** para onde desejamos enviar nosso documento. 
 
-![image-center](/assets/images/2024-04-14-img/38-testing-envelope-update.png){: .align-center}
+![visualizando body da requisicao](/assets/images/2024-04-14-img/38-testing-envelope-update.png){: .align-center}
 
 Após enviar a requisição recebemos um HTTP ```200``` como resposta caso tudo dê certo. 
 
-![image-center](/assets/images/2024-04-14-img/39-testing-envelope-update-ok.png){: .align-center}
+![visualizando retorno 200 - sucesso apos atualizar envelope](/assets/images/2024-04-14-img/39-testing-envelope-update-ok.png){: .align-center}
 
 Ao analisar a caixa de entrada do novo e-mail cadastrado podemos ver que já recebemos o documento para assinar
 
-![image-center](/assets/images/2024-04-14-img/40-testing-envelope-resend-ok.png){: .align-center}
+![visualizando novo email para assinatura do envelope](/assets/images/2024-04-14-img/40-testing-envelope-resend-ok.png){: .align-center}
 
 Ao abrir o documento, assinar e clicar em concluir podemos finalizar o processo de assinatura do nosso documento. 
 
-![image-center](/assets/images/2024-04-14-img/41-testing-envelope-sign.png){: .align-center}
+![assinando novo email no docusign](/assets/images/2024-04-14-img/41-testing-envelope-sign.png){: .align-center}
 
 Documento finalizado no Docusign. 
 
-![image-center](/assets/images/2024-04-14-img/42-testing-envelope-sign-finished.png){: .align-center}
+![visualizando status concluido do envelope no docusign](/assets/images/2024-04-14-img/42-testing-envelope-sign-finished.png){: .align-center}
 
 ## Próximos passos e Considerações finais
 
@@ -873,3 +873,23 @@ O que vem agora?
 Bons estudos!
 
 Repositório no github: [docusign-playground](https://github.com/victor-VN/docusign-playground)
+
+Fontes: 
+
+- [Docusign University - Manage Envelopes with the eSignature API](https://dsudevelopers.docusign.com/manage-envelopes-with-the-esignature-api?next=%2Fmanage-envelopes-with-the-esignature-api%2F745977)
+- [Stackoverflow - How to get the list of envelopes from a DocuSign account?](https://stackoverflow.com/questions/78009488/how-to-get-the-list-of-envelopes-from-a-docusign-account)
+- [Docusign blog - Building best practices webhook listeners, part 4: Behind the firewall with AWS](https://www.docusign.com/blog/dsdev-webhook-listeners-part-4)
+- [eSignature Documentation - How to list envelope documents](https://developers.docusign.com/docs/esign-rest-api/how-to/list-envelope-documents/)
+- [Javadoc - docusign-esign-java 2.6.2 API](https://javadoc.io/static/com.docusign/docusign-esign-java/2.6.2/overview-summary.html)
+- [eSignature Documentation - SDKs](https://developers.docusign.com/docs/esign-rest-api/sdks/)
+- [Stackoverflow - Resend DocuSign Emails](https://stackoverflow.com/questions/21565765/resend-docusign-emails)
+- [eSignature Documentation - How to send an envelope via your app](https://developers.docusign.com/docs/esign-rest-api/how-to/embedded-sending/)
+- [eSignature Documentation - How-to guides overview
+](https://developers.docusign.com/docs/esign-rest-api/how-to/)
+- [Docusign University - Send Your First Envelope](https://dsudevelopers.docusign.com/send-your-first-envelope)
+- [Docusign University - All courses](https://dsudevelopers.docusign.com/page/all-courses#-c,content-types_self-paced,languages_english)
+- [Docusign blog - From the Trenches: Common authentication issues post Go-Live](https://www.docusign.com/blog/dsdev-from-the-trenches-may-2020)
+- [eSignature Documentation - Templates](https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/templates/)
+- [eSignature Documentation - How to create a template](https://developers.docusign.com/docs/esign-rest-api/how-to/create-template)
+- [eSignature Documentation - Java SDK authentication
+](https://developers.docusign.com/docs/esign-rest-api/sdks/java/auth/)
