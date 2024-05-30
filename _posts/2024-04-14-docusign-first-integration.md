@@ -13,7 +13,7 @@ toc_label: "Conteúdo"
 toc_icon: "file"
 ---
 
-Neste artigo mostro fazer uma integração básica com o Docusign enviando documentos por email para serem assinados digitalmente
+Neste artigo mostro como fazer uma integração básica com o Docusign enviando documentos por email para serem assinados digitalmente
 
 **Objetivo:** configurar um projeto **Spring** capaz de enviar por email **documentos** para serem assinados via Docusign.
 {: .notice--info}
@@ -29,7 +29,7 @@ Neste artigo mostro fazer uma integração básica com o Docusign enviando docum
 
 ## O que é o Docusign?
 
-Docusign é um _SaaS_ baseado no envio e assinatura digital de documentos.
+Docusign é um [_SaaS_](https://www.cloudflare.com/pt-br/learning/cloud/what-is-saas/) baseado no envio e assinatura digital de documentos.
 
 **Cenário**: A empresa onde você trabalha agora possui contratos que precisam ser assinados primeiro pelos clientes, depois pela própria empresa e por fim após as duas partes assinarem o arquivo um e-mail deve ser enviado para ambos com uma cópia do contrato assinado. 
 
@@ -64,7 +64,7 @@ Dessa forma nós não tivemos que implementar do zero nenhum dos serviços que n
 
 Fazer um por um pelo painel não é uma opção já que pode levar muito tempo e trabalhar com esse volume de dados manualmente provavelmente levará a erros. 
 
-Pra isso o Docusign provém sua API - [eSignature](https://developers.docusign.com/docs/esign-rest-api/) - e que vamos explorar adiante.
+Pra isso o Docusign providencia sua API - [eSignature](https://developers.docusign.com/docs/esign-rest-api/) - e que vamos explorar adiante.
 
 
 
@@ -230,7 +230,7 @@ docusign.user.scopes=signature,impersonation
 
 Por fim basta rodar o projeto, você agora deve ter um projeto Spring funcionando e com todas dependências necessárias instaladas. 
 
-### Configuando um aplicativo no Docusign
+### Configurando um aplicativo no Docusign
 
 Após configurar o nosso projeto Spring vamos acessar o [painel da Docusign](https://account-d.docusign.com/logout) e configurar nossa primeira aplicação. É nesta etapa que vamos conseguir todas informações necessárias para preencher o arquivo **aplication.properties**. 
 
@@ -308,7 +308,7 @@ Ainda na mesma página mais abaixo clique em **Add Recipient**
 
 ![adicionando recipients para o template](/assets/images/2024-04-14-img/24-create-template-recipient.png){: .align-center}
 
-Depois marque o _checkbox_ **Set signing order** e preencha os dados de **Role** para os dois _signer_ com **owner_signer** e **stranger_signer** respectivamente. Preencha para o owner_signer um **Name** e em **Email** preencha com um e-mail que você terá acesso. É nele que o Docusign vai enviar o seu novo envelope. 
+Depois marque o _checkbox_ **Set signing order** e preencha os dados de **Role** para os dois _signers_ com **owner_signer** e **stranger_signer** respectivamente. Preencha para o owner_signer um **Name** e em **Email** preencha com um e-mail que você terá acesso. É nele que o Docusign vai enviar o seu novo envelope. 
 
 ![preenchendo dados do recipient](/assets/images/2024-04-14-img/25-create-template-recipient-orders.png){: .align-center}
 
@@ -339,7 +339,7 @@ Agora que finalizamos a criação do nosso template podemos seguir adiante.
 
 ### Autenticando no Docusign
 
-O Docusign provém 3 tipos de autenticação; _Authorization Code Grant_, _Implicit Grant_ e _JWT Grant_. 
+O Docusign providencia 3 tipos de autenticação; _Authorization Code Grant_, _Implicit Grant_ e _JWT Grant_. 
 
 Baseado no [diagrama](https://developers.docusign.com/platform/auth/) que a Docusign disponibiliza, usaremos a autenticação via **JWT** 
 
@@ -367,7 +367,7 @@ Como a nossa URL de callback aponta para localhost (_http://localhost:8080/ds/ca
 
 Finalmente, vamos por as mãos no código. Mas antes vale lembrar que esse artigo não busca substituir a [documentação do Docusign](https://developers.docusign.com/docs/esign-rest-api/sdks/) que é muito mais extensa. Não deixe de conferir a documentação oficial. 
 
-Todo o código feito abaixo pode está no github: [docusign-playground](https://github.com/victor-VN/docusign-playground)
+Todo o código feito abaixo está no github: [docusign-playground](https://github.com/victor-VN/docusign-playground)
 
 Prosseguindo, nossa aplicação terá 1 endpoint ```/docusign``` com dois métodos: ```POST``` e ```PUT```. Vamos começar criando 3 novos _packages_ na nossa aplicação; ```controller```, ```model``` e ```service```. 
 
