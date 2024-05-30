@@ -827,7 +827,7 @@ Vemos também que o email foi enviado para a segunda pessoa que deve assinar o d
 
 ### Atualizando um envelope
 
-Agora vamos imagina que ocorreu um erro e que na verdade a segunda pessoa que recebeu o e-mail para assinar não possui mais acesso aquele e-mail e portanto deseja receber o documento em um novo e-mail. 
+Agora vamos imaginar que ocorreu um erro e que na verdade a segunda pessoa que recebeu o e-mail para assinar não possui mais acesso aquele e-mail e portanto deseja receber o documento em um novo e-mail. 
 
 Para isso vamos usar o segundo método que criamos. 
 
