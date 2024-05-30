@@ -296,7 +296,7 @@ Aqui nosso documento será um arquivo **.docx** com o seguinte conteúdo
 
 ![documento .docx que sera o arquivo de template](/assets/images/2024-04-14-img/21-mydoc-view.png){: .align-center}
 
-Depois vamos no [painel Docusign]() criar o template clicando em **Templates** e depois **New** > **Create Template**
+Depois vamos no [painel Docusign](https://account-d.docusign.com/logout) criar o template clicando em **Templates** e depois **New** > **Create Template**
 
 ![criando um novo template no painel docusign](/assets/images/2024-04-14-img/22-create-template.png){: .align-center}
 
