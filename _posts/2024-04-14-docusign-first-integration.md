@@ -831,7 +831,7 @@ Agora vamos imagina que ocorreu um erro e que na verdade a segunda pessoa que re
 
 Para isso vamos usar o segundo método que criamos. 
 
-Quando fizemos a criação do acordo recebemos como resposta um status ```200``` com um corpo de response, nesse corpo é possível ver um campo chamado **envelopeId**. Copie o valor retornado nesse campo para usar na próxima requisição
+Quando fizemos a criação do envelope recebemos como resposta um status ```200``` com um corpo de response, nesse corpo é possível ver um campo chamado **envelopeId**. Copie o valor retornado nesse campo para usar na próxima requisição
 
 ![enviando requisicao para atualizar envelope no docusign pelo postman](/assets/images/2024-04-14-img/32-testing-envelope-created.png){: .align-center}
 
