@@ -60,7 +60,7 @@ Nesse processo o Docusign:
 
 Dessa forma nós não tivemos que implementar do zero nenhum dos serviços que nos foi solicitado, nem tivemos que nos preocupar com o _status_ desses serviços, os possíveis _bugs_ de implementação, etc. 
 
-**Mas agora temos um outro dilema**: e se a empresa tiver que enviar documentos paras 5000 clientes diferentes assinar? 
+**Mas agora temos um outro dilema**: e se a empresa tiver que enviar documentos para 5000 clientes diferentes assinar? 
 
 Fazer um por um pelo painel não é uma opção já que pode levar muito tempo e trabalhar com esse volume de dados manualmente provavelmente levará a erros. 
 
@@ -76,7 +76,7 @@ Para fazer nossa integração com o Docusign vamos precisar:
 - criar uma **conta _developer_** (caso ainda não possua uma crie [aqui](https://developers.docusign.com/)) e acessar o painel de controle dos seus Envelopes [aqui](https://apps-d.docusign.com/send/home)
 - criar um projeto **Spring Boot** (você pode criar usando o [initializr](https://start.spring.io/)) com **apenas Spring Web** como dependência
 - Ter o [**Postman**](https://www.postman.com/) ou uma ferramenta de seu gosto instalado para enviar as requisições
-- 3 (três) contas de e-mail diferentes para testar o envio dos e-mails
+- 3 contas de e-mail diferentes para testar o envio dos e-mails
 
 ### Configurando o projeto Spring
 {: #configurar-conta}
