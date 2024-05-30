@@ -546,7 +546,7 @@ Tem bastante coisa acontecendo aqui então vamos explicar por partes:
 
 1 - Primeiro recuperamos o conteúdo arquivo **private-key.txt**, necessário para fazer a autenticação.
 
-2 - Depois recuperamos da _property_ **docusign.user.scopes** os _scopes_ da nossa autenticação - ou seja, as permissões que aquele token terá para fazer auterações no Docusign - e transformarmos em uma lista de _Strings_. 
+2 - Depois recuperamos da _property_ **docusign.user.scopes** os _scopes_ da nossa autenticação - ou seja, as permissões que aquele token terá para fazer alterações no Docusign - e transformarmos em uma lista de _Strings_. 
 
 3 - Criamos uma instância do objeto **[ApiClient](https://javadoc.io/doc/com.docusign/docusign-esign-java/latest/com/docusign/esign/client/ApiClient.html)**. Esse objeto é o que será retornado e é ele que vamos usar pra fazer todas nossas chamadas HTTP.
 
